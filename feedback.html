@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en" dir="Itr">
+
+<head>
+  <style>
+    #divError {
+      color: salmon;
+      margin-left: 15px;
+      font-weight: bold;
+
+    }
+  </style>
+  <script>
+    function validateForm() {
+      alert("check");
+      var dateEntered = document.getElementById("txtDate").value;
+
+
+      alert(dateEntered);
+
+      var errorCount = 0;
+      var errorMsg = "";
+
+
+      if (dateEntered == "") {
+        errorCount++;
+        errorMsg += "Date is needed to fill in. <br>";
+      }
+
+
+      if (errorCount > 0) {
+        document.getElementById("divError").innerHTML = errorMsg;
+        return false;
+      } else {
+        return true;
+      }
+      document.write(errorMsg)
+      document.write("<errortxt>" + errorMsg + "</errorMsg>")
+
+    }
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>GRAEXDINO</title>
+  <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+  <link href="../CSS/style.css" rel="stylesheet">
+  <link href="../CSS/main.css" rel="stylesheet">
+  <link href="../CSS/feedback.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
+  <link rel="icon" href="C:\Users\User\Desktop\IT1352 - Web Development\Website Assignment\Images\hamburger-solid.svg" />
+  <style>
+
+    .connection {
+      font-size: 20px;
+      font-family: monospace;
+      font-weight: bold;
+      color: #f1f1f1;
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    body {
+      font-family: Verdana, sans-serif;
+      margin: 0
+    }
+
+  </style>
+</head>
+<title>Feedback Form</title>
+</head>
+
+<body>
+  <header>
+    <ul id="menu">
+      <div class='container'>
+        <nav>
+          <div class='menu-icons'>
+            <i class='icon ion-md-menu'></i>
+            <i class='icon ion-md-close'></i>
+          </div>
+          <a href='home.html' class='logo'>
+            <i class='icon ion-md-restaurant'></i>
+          </a>
+          <ul class="nav-list">
+            <li>
+              <a href="home.html" target="_blank">Home</a>
+            </li>
+            <li>
+              <a href="menu.html" target="_blank">Menu</a>
+            </li>
+            <li>
+              <a href="contact.html" target="_blank">Contact and Communication</a>
+              <ul class="sub-menu">
+                <li>
+                  <a href="feedback.html" target="_blank">Feedback form</a>
+                </li>
+                <li>
+                  <a href="contact.html" target="_blank">Contact
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="blog.html" target="_blank">Blog
+                <i class="icon ion-md-arrow-dropdown"></i>
+              </a>
+              <ul class="sub-menu">
+                <li>
+                  <a href="blog.html" target="_blank">Gallery
+                    <ul class="sub-menu">
+                      <li>
+                        <a href="videos.html" target="_blank">Videos
+                          <i class="icon ion-md-arrow-dropdown"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="blog.html" target="_blank">Images
+                          <i class="icon ion-md-arrow-dropdown"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </a>
+                  <a href="history.html" target="_blank">History
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="move-right btn">
+              <a href="bookingform.html" target="_blank">Book a reservation</a>
+              <ul class="sub-menu">
+                <li>
+                  <a href="bookingform.html" target="_blank">Reservation</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </ul>
+  </header>
+  <section class="image1">
+    <div class="text">
+      <h1 style="font-family: 'Jost', sans-serif;align-items:center;margin-top:8%">FEEDBACK FORM</h1>
+    </div>
+  </section>
+  <script src="../js/scripts.js"></script>
+  <br><br>
+  <!--End nav-->
+  <div id="divError">
+  </div>
+  <p style="text-align:center;font-family:Anton, sans-serif;font-style:italic;font-size:20px;font-weight:bold;color:white;">Indicates Mandatory Field*</p>
+  <br>
+
+  <form name="feedback"action="thankyouforfeedback.html"onsubmit="return validateForm()" method="post" class="contactus-form">
+    <div class="row">
+      <div class="column">
+        <label for="sname">
+          <strong style="margin-left:10%;">Salutation*</strong>
+        </label>
+        <br />
+        <select id="sname" name="sname">
+          <option>Mr</option>
+          <option>Mrs</option>
+          <option>Ms</option>
+          <option>Mdm</option>
+          <option>Dr</option>
+        </select>
+        <br />
+        <br />
+        <label for="fname">
+          <strong style="margin-left:10%;">First Name*</strong>
+        </label>
+        <br />
+        <input type="text" id="fname" name="fname" placeholder="John" required="required"/>
+        <br />
+        <br />
+        <label for="lname">
+          <strong style="margin-left:10%;">Last Name*</strong>
+        </label>
+        <br />
+        <input type="text" id="lname" name="lname" placeholder="Doe" required="required" />
+        <br/>
+        <br/>
+        <label for="txtemail">
+          <strong style="margin-left:10%;">Email Address*</strong>
+        </label>
+        <br />
+        <input type="email" id="txtEmail" name="txtEmail" placeholder="johnabc@abc.com" />
+        <br />
+        <br />
+        <label for="number">
+          <strong style="margin-left:10%;">Mobile Number*</strong>
+        </label>
+        <br />
+        <input type="text" id="number" name="number" placeholder="12345678" required="required" maxlength="8" />
+        <br />
+        <br />
+        <label for="onumber">
+          <strong style="margin-left:10%;">Office/Home Number</strong>
+        </label>
+        <br />
+        <input type="text" id="onumber" name="onumber" maxlength="8" placeholder="12345678" />
+        <br />
+        <br />
+        <label for="date">
+          <strong style="margin-left:10%;">Date of Service: </strong>
+        </label>
+        <br />
+        <input type="date" id="txtDate" name="date" />
+        <br/>
+
+      </div>
+      <div class="column" style="border-left: 2px solid lightgrey;height:590px;">
+        <label for="nof">
+          <strong style="margin-left:10%;">Nature of Feedback*</strong>
+        </label>
+        <br />
+        <select>
+          <option>Career Positions</option>
+          <option>Compliments</option>
+          <option>Complaints</option>
+        </select>
+        <br />
+        <br />
+        <label for="feedback">
+          <strong style="margin-left:10%;">Feedback*</strong>
+        </label>
+        <br />
+        <textarea rows="10" cols="40" required="required" placeholder="Comment here..."></textarea>
+        <br />
+        <br />
+        <strong style="margin-left:10%;">Attachments if have:</strong>
+        <br />
+        <div class="upload">
+          <div class="field">
+            <div class="file is-right is-info">
+              <label class="file-label">
+                <span class="file-icon">
+                  <i class="fa fa-upload" aria-hidden="true"></i>
+                </span>
+                <input class="file-input" type="file" name="resume" />
+                <span class="file-cta">
+                </span>
+                <span class="file-name">
+                </span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <br />
+        <br />
+        <input type="checkbox" required="required" style="margin-left:10%;" />
+        You have read, understood and agree to be bound by the Restaurant
+        <div style="margin-left:13%;">
+          GRAEXDINO' Policy as it may be amended from time
+          to time and agree that we may collect, use and disclose your personal data as provided in this form for the purposes set out in the
+          GRAEXDINO' Protection Policy.Where you are providing us with personal data of another individual, you
+          warrant that you are authorised to consent to the GRAEXDINO' Data Protection Policy and
+          provide us with such personal data on his/her behalf.
+        </div>
+        <br />
+      </div>
+      <br />
+      <br />
+      <input type="submit" value="Submit" />
+      <input type="reset" value="Reset" />
+    </div>
+  </form>
+</body>
+<script src="../js/scripts.js"></script>
+<footer>
+  <div class="footer-container">
+    <div class="left-col">
+      <br>
+      <img src="../Images/logo.png"></img>
+      <div class="social-media">
+        <p class="connection">Connect with Us!</p><br>
+        <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com/Twitter?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+        <a href="https://web.whatsapp.com/"><i class="fab fa-whatsapp"></i></a>
+      </div>
+      <p class="rights-text">&copy;GRAEXDINO. ALL RIGHTS RESERVED.</p>
+    </div>
+    <div class="right-col">
+      <h1 class="email">Our Newsletter</h1>
+      <div class="border"></div><br>
+      <p class="email"> Enter your email to get our news and updates</p><br>
+      <form action="" class="newsletter-form">
+        <p style="color:white;font-family:monospace;font-size:15px;">Email Subscription:&nbsp;
+          <input type="text" class="txtb" placeholder="Enter your Email"></p>
+        <input type="submit" class="btn" value="submit">
+      </form>
+    </div>
+
+</footer>
+
+</html>

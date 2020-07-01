@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en" dir="Itr">
+
+<head>
+
+  <style>
+    #divError {
+      color: salmon;
+      margin-left: 15px;
+      font-weight: bold;
+
+    }
+  </style>
+
+  <script>
+    function validateForm() {
+      alert("check");
+      var timeEntered = document.getElementById("txtTime").value;
+      var emailEntered = document.getElementById("txtEmail").value;
+      var dateEntered = document.getElementById("txtDate").value;
+
+      alert(emailEntered);
+      alert(timeEntered);
+      alert(dateEntered);
+
+      var errorCount = 0;
+      var errorMsg = "";
+
+      if (timeEntered == "") {
+        errorCount++; // errorCount = errorCount + 1;
+        errorMsg += "Time is needed to fill in. <br>";
+      }
+
+      if (emailEntered == "") {
+        errorCount++;
+        errorMsg += "Email is needed to fill in. <br>";
+      }
+      if (dateEntered == "") {
+        errorCount++;
+        errorMsg += "Date is needed to fill in. <br>";
+      }
+
+
+      if (errorCount > 0) {
+        document.getElementById("divError").innerHTML = errorMsg;
+        return false;
+      } else {
+        return true;
+      }
+      document.write(errorMsg)
+      document.write("<errortxt>" + errorMsg + "</errorMsg>")
+
+      //  var x = document.forms["myBookingForm"]["time"].value;
+      // var errorCount = 0;
+      // var timeEntered = document.getElementById("time").value;
+      //
+      // if (x == "") {
+      //   //  alert("time must be filled out");
+      //   errorMsg += "Time must be filled out <br>";
+      //     errorCount++;
+      //
+      //   }
+      //
+      //   if(errorCount > 0){
+      //     document.getElementById("error").value = errorMsg;
+      //     return false;
+      //   }
+      // }
+    }
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>GRAEXDINO</title>
+  <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+  <link href="../CSS/style.css" rel="stylesheet">
+  <link href="../CSS/main.css" rel="stylesheet">
+  <link href="../CSS/booking.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
+  <link rel="icon" href="C:\Users\User\Desktop\IT1352 - Web Development\Website Assignment\Images\hamburger-solid.svg" />
+  <style>
+    .connection {
+      font-size: 20px;
+      font-family: monospace;
+      font-weight: bold;
+      color: #f1f1f1;
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    body {
+      font-family: Verdana, sans-serif;
+      margin: 0
+    }
+  </style>
+</head>
+
+<title>Booking Form</title>
+</head>
+
+<body>
+  <header>
+    <ul id="menu">
+      <div class='container'>
+        <nav>
+          <div class='menu-icons'>
+            <i class='icon ion-md-menu'></i>
+            <i class='icon ion-md-close'></i>
+          </div>
+          <a href='home.html' class='logo'>
+            <i class='icon ion-md-restaurant'></i>
+          </a>
+          <ul class="nav-list">
+            <li>
+              <a href="home.html" target="_blank">Home</a>
+            </li>
+            <li>
+              <a href="menu.html" target="_blank">Menu</a>
+            </li>
+            <li>
+              <a href="contact.html" target="_blank">Contact and Communication</a>
+              <ul class="sub-menu">
+                <li>
+                  <a href="feedback.html" target="_blank">Feedback form</a>
+                </li>
+                <li>
+                  <a href="contact.html" target="_blank">Contact
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="blog.html" target="_blank">Blog
+                <i class="icon ion-md-arrow-dropdown"></i>
+              </a>
+              <ul class="sub-menu">
+                <li>
+                  <a href="blog.html" target="_blank">Gallery
+                    <ul class="sub-menu">
+                      <li>
+                        <a href="videos.html" target="_blank">Videos
+                          <i class="icon ion-md-arrow-dropdown"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="blog.html" target="_blank">Images
+                          <i class="icon ion-md-arrow-dropdown"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </a>
+                  <a href="history.html" target="_blank">History
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="move-right btn">
+              <a href="bookingform.html" target="_blank">Book a reservation</a>
+              <ul class="sub-menu">
+                <li>
+                  <a href="bookingform.html" target="_blank">Reservation</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </ul>
+  </header>
+  <section class="image1">
+    <div class="text">
+      <h1 style="font-family: 'Jost', sans-serif;align-items:center;margin-top:8%">BOOKING FORM</h1>
+    </div>
+  </section>
+  <script src="../js/scripts.js"></script>
+  <br><br>
+
+
+
+  <div id="divError">
+  </div>
+  <!--End nav-->
+  <p style="text-align:center;font-family:Anton, sans-serif;font-style:italic;font-size:20px;font-weight:bold;color:white;">Indicates Mandatory Field*</p>
+  <br>
+  <form name="myBookingForm" action="thankyouforbooking.html" onsubmit="return validateForm();" method="post" class="contactus-form">
+    <div class="row">
+      <div class="column">
+        <label for="sname">
+          <strong style="margin-left:10%;">Salutation*</strong>
+        </label>
+        <br />
+        <select id="sname" name="sname">
+          <option>Mr</option>
+          <option>Mrs</option>
+          <option>Ms</option>
+          <option>Mdm</option>
+          <option>Dr</option>
+        </select>
+        <br />
+        <br />
+        <label for="fname">
+          <strong style="margin-left:10%;">First Name*</strong>
+        </label>
+        <br />
+        <input type="text" id="fname" name="fname" placeholder="John" required=required />
+        <br />
+        <br />
+        <label for="lname">
+          <strong style="margin-left:10%;">Last Name*</strong>
+        </label>
+        <br />
+        <input type="text" id="lname" name="lname" placeholder="Doe" required="required" />
+        <br />
+        <br />
+        <label for="txtemail">
+          <strong style="margin-left:10%;">Email Address*</strong>
+        </label>
+        <br />
+        <input type="email" id="txtEmail" name="txtEmail" placeholder="johnabc@abc.com" />
+        <br />
+        <br />
+        <label for="number">
+          <strong style="margin-left:10%;">Mobile Number*</strong>
+        </label>
+        <br />
+        <input type="text" id="number" name="number" placeholder="12345678" required="required" maxlength="8" />
+        <br />
+        <br />
+        <label for="date">
+          <strong style="margin-left:10%;">Date of Appointment: </strong>
+        </label>
+        <br />
+        <input type="date" id="txtDate" name="date" />
+        <br />
+        <br />
+        <script src="ddmmyyyy-validation.js"></script>
+        <label for="time">
+          <strong style="margin-left:10%;">Time: </strong>
+        </label>
+        <br />
+        <input type="time" id="txtTime" name="txtTime" />
+        <br />
+      </div>
+      <div class="column" style="border-left: 2px solid lightgrey;height:590px;">
+        <label for="nof">
+          <strong style="margin-left:10%;">Menu*</strong>
+        </label>
+        <br />
+        <select>
+          <option>Breakfast</option>
+          <option>Lunch</option>
+          <option>Dinner</option>
+          <option>Brunch</option>
+        </select>
+        <br />
+        <br />
+        <label for="feedback">
+          <strong style="margin-left:10%;">Additonal Requirements:</strong>
+        </label>
+        <br />
+        <textarea rows="10" cols="40" required="required" placeholder="Comment here..."></textarea>
+        <br />
+        <br />
+        <strong style="margin-left:10%;">Attachments if have:</strong>
+        <br />
+        <div class="upload">
+          <div class="field">
+            <div class="file is-right is-info">
+              <label class="file-label">
+                <span class="file-icon">
+                  <i class="fa fa-upload" aria-hidden="true"></i>
+                </span>
+                <input class="file-input" type="file" name="resume" />
+                <span class="file-cta">
+                </span>
+                <span class="file-name">
+                </span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <br />
+        <br />
+        <input type="checkbox" required="required" style="margin-left:10%;" />
+        You have read, understood and agree to be bound by the Restaurant
+        <div style="margin-left:13%;">
+          GRAEXDINO' Policy as it may be amended from time
+          to time and agree that we may collect, use and disclose your personal data as provided in this form for the purposes set out in the
+          GRAEXDINO' Protection Policy.Where you are providing us with personal data of another individual, you
+          warrant that you are authorised to consent to the GRAEXDINO' Data Protection Policy and
+          provide us with such personal data on his/her behalf.
+        </div>
+        <br />
+      </div>
+      <br />
+      <br />
+      <input type="submit" value="Submit" />
+      <input type="reset" value="Reset" />
+    </div>
+  </form>
+</body>
+<script src="../js/scripts.js"></script>
+<footer>
+  <div class="footer-container">
+    <div class="left-col">
+      <br>
+      <img src="../Images/logo.png"></img>
+      <div class="social-media">
+        <p class="connection">Connect with Us!</p><br>
+        <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com/Twitter?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+        <a href="https://web.whatsapp.com/"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.youtube.com/channel/UCTSClX8X7i_gSnhS0Ra682A"> <i class="fab fa-youtube"></i></a>
+      </div>
+      <p class="rights-text">&copy;GRAEXDINO. ALL RIGHTS RESERVED.</p>
+    </div>
+    <div class="right-col">
+      <h1 class="email">Our Newsletter</h1>
+      <div class="border"></div><br>
+      <p class="email"> Enter your email to get our news and updates</p></br>
+      <form action="" class="newsletter-form" id="submit-form">
+        <p style="color:white;font-family:monospace;font-size:15px;">Email Subscription:&nbsp;
+          <input type="text" class="txtb" placeholder="Enter your Email" name="txtEmail"></p>
+        <input type="submit" class="btn" value="submit">
+      </form>
+        <br/>
+      <p style="color:white;font-family:monospace;font-size:15px;" id="result"></p>
+      <script>
+        var form = document.getElementById("submit-form");
+        form.onsubmit = function(e) {
+          e.preventDefault();
+          var result = document.getElementById('result');
+          result.innerHTML = 'Email is submitted!' + form.txtEmail.value;
+          this.reset();
+        };
+      </script>
+    </div>
+
+
+    <!-- <script>
+    validateForm();
+    </script> -->
+</footer>
+
+</html>

@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en" dir="Itr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>GRAEXDINO</title>
+  <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+  <link href="../CSS/style.css" rel="stylesheet">
+  <link href="../CSS/main.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Jost&family=Montserrat:ital,wght@1,600&display=swap" rel="stylesheet">
+  <link rel="icon" href="C:\Users\User\Desktop\IT1352 - Web Development\Website Assignment\Images\hamburger-solid.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .connection {
+      font-size: 20px;
+      font-family: monospace;
+      font-weight: bold;
+      color: #f1f1f1;
+    }
+
+
+
+    .font3 {
+      font-family: 'Jost', sans-serif;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 15px;
+      text-align: center;
+      background-color: #d0b094;
+
+    }
+
+    .font2 {
+      font-family: 'Jost', sans-serif;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 15px;
+      text-align: center;
+      background-color: rgba(242, 236, 179);
+    }
+
+
+    * {
+      box-sizing: border-box
+    }
+
+    body {
+      font-family: Verdana, sans-serif;
+      margin: 0
+    }
+
+    .mySlides {
+      display: none
+    }
+
+    img {
+      vertical-align: middle;
+      margin-right: 12%;
+    }
+
+    /* Slideshow container */
+    .slideshow-container {
+      max-width: 2000px;
+      position: relative;
+      margin: auto;
+    }
+
+    /* Next & previous buttons */
+    .prev,
+    .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
+
+
+    /* Position the "next button" to the right */
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover,
+    .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    /* Caption text */
+    .text {
+      color: #f2f2f2;
+      font-size: 15px;
+      padding: 8px 12px;
+      position: absolute;
+      bottom: 8px;
+      width: 100%;
+      text-align: center;
+    }
+
+    /* Fading animation */
+    .fade {
+      -webkit-animation-name: fade;
+      -webkit-animation-duration: 1.5s;
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+
+    @-webkit-keyframes fade {
+      from {
+        opacity: .4
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+
+    @keyframes fade {
+      from {
+        opacity: .4
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+
+    /* On smaller screens, decrease text size */
+    @media only screen and (max-width: 300px) {
+
+      .prev,
+      .next,
+      .text {
+        font-size: 11px
+      }
+    }
+  </style>
+</head>
+
+
+<!--Nav markup goes here-->
+<header>
+  <div class='container'>
+    <nav>
+      <div class='menu-icons'>
+        <i class='icon ion-md-menu'></i>
+        <i class='icon ion-md-close'></i>
+      </div>
+      <a href='home.html' class='logo'>
+        <i class='icon ion-md-restaurant'></i>
+      </a>
+      <ul class="nav-list">
+        <li>
+          <a href="home.html" target="_blank">Home</a>
+        </li>
+        <li>
+          <a href="menu.html" target="_blank">Menu</a>
+        </li>
+        <li>
+          <a href="contact.html" target="_blank">Contact and Communication</a>
+          <ul class="sub-menu">
+            <li>
+              <a href="feedback.html" target="_blank">Feedback form</a>
+            </li>
+            <li>
+              <a href="contact.html" target="_blank">Contact
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="blog.html" target="_blank">Blog
+            <i class="icon ion-md-arrow-dropdown"></i>
+          </a>
+          <ul class="sub-menu">
+            <li>
+              <a href="blog.html" target="_blank">Gallery
+                <ul class="sub-menu">
+                  <li>
+                    <a href="videos.html" target="_blank">Videos
+                      <i class="icon ion-md-arrow-dropdown"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="blog.html" target="_blank">Images
+                      <i class="icon ion-md-arrow-dropdown"></i>
+                    </a>
+                  </li>
+                </ul>
+              </a>
+              <a href="history.html" target="_blank">History
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="move-right btn">
+          <a href="bookingform.html" target="_blank">Book a reservation</a>
+          <ul class="sub-menu">
+            <li>
+              <a href="bookingform.html" target="_blank">Reservation</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<!--End nav-->
+
+<body>
+  <!--Hero-->
+  <section class="hero">
+    <div class="text">
+      <h2>Proudly serving</h2>
+      <h1>Fusion Food Galore </h1>
+      <!--mixed of fusion delicacies and pastry-->
+      <p>misto di prelibatezze fusion e pasticceria.</p>
+      <a href="history.html" class="btn" target="_blank">Learn more</a>
+    </div>
+  </section>
+  <script src="../js/scripts.js"></script>
+
+  <table class="font3">
+    <tr>
+      <td rowspan="2" style="width:50%;">
+        <p style="font-weight:bold;margin-left:10%;"></p>
+        <p style="margin-left:15%;">
+          <img src="..\Images\close-up-photo-of-a-cheese-burger-1633578.jpg" alt="image" width="400px" height="350px" class="responsive" style="margin-top:10%;">
+          &nbsp;<br /><br />
+      </td>
+
+    </tr>
+
+    <tr class="font3">
+      <td style="width:50%;">
+        <p style="font-weight:bold;font-family:'Jost';font-size:30px;">SIGNATURE DISH</p><br />
+        <div class="border2"></div>
+        <p style="margin-left:10%;text-align:left;">
+          GRAEXDINO draws the modern Asian families to come into this restaurant, introducing diverse flavours and influences to their plates.
+          Led by Chloe Tan (Lolla, Pork Asparagus Deli) and Astelle Liu (Grill & Burger), familiar, quality produce is delivered with a signature twist while services provided with genuine warmth and hospitality.
+          Refined, playful and deliberate, we celebrates our joy in sharing such great food at its heart.<br /><br />
+          Available only at Tuesday - Friday<br /><br />
+          10am - 11pm<br /><br />
+          For other specials, head over to our <a href="menu.html" alt="menu" target="_blank">menu</a>
+          &nbsp;<br /><br />
+      </td>
+    </tr>
+  </table>
+
+  <table class="font2">
+    <tr>
+      <td rowspan="2" style="width:50%;">
+        <p style="font-weight:bold;margin-left:10%;"></p>
+        <p style="margin-left:15%;">
+          <img src="..\Images\anise-aroma-art-bazaar-277253.jpg" alt="image" width="400px" height="350px" class="responsive" style="margin-top:10%;">
+          &nbsp;<br /><br />
+      </td>
+
+    </tr>
+
+    <tr class="font2">
+      <td style="width:50%;">
+        <p style="font-weight:bold;font-family:'Jost';font-size:30px;">ABOUT US</p><br />
+        <div class="border2"></div>
+        <p style="margin-left:10%;text-align:left;">
+          GRAEXDINO was founded in 2002 by Joel Ko who spotted a opportuntity to broaden his market by bringing this restaurant to Singapore.It was originated from Italy.We hope to deliver superior quality ,with tastiness of every bite you
+          consume,bringing satisfaction to your fingertips.
+          &nbsp;</p><br /><br />
+        <p style="margin-left:10%;text-align:left">
+          Inspired by Wolfgang Puck, GRAEXDINO is based on the urban ethos of being brave enough to change the game. We're shaking up the dining scene with an ambience that defies tradition, modern AND even fusion dishes peppered with our own touch,
+          and a amazing Singapore mixed fusion cultural food being prepped in with delicacies that grabs your attention.</p>
+      </td>
+    </tr>
+
+  </table>
+
+  <div class="slideshow-container">
+    <div class="mySlides fade">
+      <img src="C:\Users\User\Desktop\IT1352 - Web Development\Website Assignment\Images\burrito-chicken-delicious-dinner-461198.jpg" class="responsive" style="width:100%">
+
+    </div>
+
+    <div class="mySlides fade">
+      <img src="C:\Users\User\Desktop\IT1352 - Web Development\Website Assignment\Images\close-up-photo-of-person-holding-pizza-1653877.jpg" style="width:100%">
+
+    </div>
+
+    <div class="mySlides fade">
+      <img src="C:\Users\User\Desktop\IT1352 - Web Development\Website Assignment\Images\blur-breakfast-close-up-dairy-product-376464.jpg" style="width:100%">
+
+    </div>
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+</body>
+<footer>
+  <div class="footer-container">
+    <div class="left-col">
+      <br>
+      <img src="../Images/logo.png"></img>
+      <div class="social-media">
+        <p class="connection">Connect with Us!</p><br>
+        <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com/Twitter?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+        <a href="https://web.whatsapp.com/"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.youtube.com/channel/UCTSClX8X7i_gSnhS0Ra682A"> <i class="fab fa-youtube"></i></a>
+      </div>
+      <p class="rights-text">&copy;GRAEXDINO. ALL RIGHTS RESERVED.</p>
+    </div>
+    <div class="right-col">
+      <h1 class="email">Our Newsletter</h1>
+      <div class="border"></div><br>
+      <p class="email"> Enter your email to get our news and updates</p></br>
+      <form action="" class="newsletter-form" id="submit-form">
+        <p style="color:white;font-family:monospace;font-size:15px;">Email Subscription:&nbsp;
+          <input type="text" class="txtb" placeholder="Enter your Email" name="txtEmail"></p>
+        <input type="submit" class="btn" value="submit">
+      </form>
+        <br/>
+      <p style="color:white;font-family:monospace;font-size:15px;" id="result"></p>
+      <script>
+        var form = document.getElementById("submit-form");
+        form.onsubmit = function(e) {
+          e.preventDefault();
+          var result = document.getElementById('result');
+          result.innerHTML = 'Email is submitted!' + form.txtEmail.value;
+          this.reset();
+        };
+      </script>
+    </div>
+
+
+</footer>
+<script>
+  var slideIndex = 1;
+  showSlides(slideIndex);
+
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {
+      slideIndex = 1
+    }
+    if (n < 1) {
+      slideIndex = slides.length
+    }
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+  }
+</script>
+
+</html>
